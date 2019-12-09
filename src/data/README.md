@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/847e1cff-42c3-4801-b3ed-725177545632/deploy-status)](https://app.netlify.com/sites/snorkelsearch/deploys)
