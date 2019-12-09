@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Boxy {
+  min-width: 10vh;
+  min-height: 5vh;
+  padding: 1.5vh;
+  background-color: rgb(87, 143, 184);
+  border-radius: 1vh;
+  margin-bottom: 1vh;
+}
+
+.Special {
+  margin-bottom: .5vh;
+  padding-right: 9vh;
+  padding-left: 9vh;
+  width: 50vh;
+  background-color: rgb(68, 86, 98);
+  border-radius: 1vh;
+  font-size: 2vh;
+}
