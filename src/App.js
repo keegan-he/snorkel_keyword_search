@@ -20,16 +20,16 @@ class App extends Component {
     this.setState({ keyword: event.target.value });
   }
   render() {
-    const { keyword, JSONData } = this.state;
+
     return (
       <div className="App">
         <header className="App-header">
         <img src="https://www.snorkel.org/doks-theme/assets/images/layout/Snorkel.png"></img>
           <div className="Boxy">
             <h1>Snorkel Keyword Search</h1>
-            <input type="text" defaultValue={keyword} onChange={this.searchHandler} />
+            <input type="text" defaultValue={this.state.keyword} onChange={this.searchHandler} />
           </div>
-          {JSONData.filter(searchingFor(keyword)).map(sentence => (
+          {this.state.JSONData.filter(searchingFor(this.state.keyword)).map(sentence => (
             <div className="Special">
             <div key={sentence.id}>
               <p>{sentence.data}</p>
