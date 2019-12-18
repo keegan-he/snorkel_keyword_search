@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import JSONData from './data/sentences.json';
 import './App.css';
 
+
+//higher order function
 function searchingFor(keyword) {
   return function(x) {
     return x.data.toLowerCase().includes(keyword.toLowerCase()) || !keyword;
   };
 }
+
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -16,11 +20,12 @@ class App extends Component {
     };
     this.searchHandler = this.searchHandler.bind(this);
   }
+
+
   searchHandler(event) {
     this.setState({ keyword: event.target.value });
   }
   render() {
-
     return (
       <div className="App">
         <header className="App-header">
@@ -30,6 +35,7 @@ class App extends Component {
             <input type="text" defaultValue={this.state.keyword} onChange={this.searchHandler} />
           </div>
           {this.state.JSONData.filter(searchingFor(this.state.keyword)).map(sentence => (
+            
             <div className="Special">
             <div key={sentence.id}>
               <p>{sentence.data}</p>
